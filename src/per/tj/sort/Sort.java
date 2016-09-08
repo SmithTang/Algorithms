@@ -17,6 +17,9 @@ public class Sort {
 	
 	private static final int TRESHOLD_VALUE = 20;
 	
+	//lock constructor, inhibit intantiation
+	private Sort() {}
+	
 	/**
 	 * @param distorted int[]
 	 * @return new sorted int[]
@@ -256,7 +259,7 @@ public class Sort {
 			System.out.print(i + "\t");
 		System.out.println("");
 		
-		int[] output = Sort.mergeSort(input, 0, SortType.DESCENDING);
+		int[] output = Sort.mergeSort(input, 0, Sort.SortType.DESCENDING);
 		
 		System.out.print("Output Integers: ");
 		for(int i:output)
