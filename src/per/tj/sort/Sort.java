@@ -1,5 +1,7 @@
 package per.tj.sort;
 
+import java.util.Scanner;
+
 /**
  * @Time 2016-8-27 21:53:56
  * @version 1.0
@@ -259,11 +261,16 @@ public class Sort {
 			System.out.print(i + "\t");
 		System.out.println("");
 		
-		int[] output = Sort.mergeSort(input, 0, Sort.SortType.DESCENDING);
+		int[] output = Sort.mergeSort(input, 0, Sort.SortType.ASCENDING);
 		
 		System.out.print("Output Integers: ");
 		for(int i:output)
 			System.out.print(i + "\t");
 		System.out.println("");
+		
+		int target;
+		target = new Scanner(System.in).nextInt();
+		
+		System.out.println("Find: " + BinarySearch.binarySearch(output, target));
 	}
 }
